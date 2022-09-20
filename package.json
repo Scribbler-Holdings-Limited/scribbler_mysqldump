@@ -1,6 +1,6 @@
 {
     "name": "@manderlai/mysqldump",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Create a DUMP from MySQL",
     "main": "dist/cjs.js",
     "module": "dist/es.js",

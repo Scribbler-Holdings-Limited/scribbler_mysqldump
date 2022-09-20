@@ -2,13 +2,14 @@ import * as fs from 'fs';
 import * as zlib from 'zlib';
 
 function compressFile(filename: string): Promise<void> {
+
     const tempFilename = `${filename}.temp`;
 
     fs.renameSync(filename, tempFilename);
 
     const deleteFile = (file: string): void => {
         try {
-            fs.access(file, fs.F_OK, (err) => {
+            fs.access(file, fs.constants.F_OK, (err) => {
                 if (err) {
                     return
                 }
