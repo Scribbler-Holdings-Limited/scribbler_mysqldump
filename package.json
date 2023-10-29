@@ -1,5 +1,5 @@
 {
-    "name": "@manderlai/mysqldump",
+    "name": "scribbler_mysqldump",
     "version": "0.1.2",
     "description": "Create a DUMP from MySQL",
     "main": "dist/cjs.js",
