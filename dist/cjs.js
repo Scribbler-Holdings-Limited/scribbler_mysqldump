@@ -643,7 +643,7 @@ function getDataDump(connectionOptions, options, tables, dumpToFile) {
                         }
                         resolve();
                     });
-                    query.on('error', 
+                    query.on('error',
                     /* istanbul ignore next */ err => reject(err));
                 });
                 // update the table definition
@@ -685,6 +685,7 @@ function compressFile(filename) {
     fs.renameSync(filename, tempFilename);
     const deleteFile = (file) => {
         try {
+
             fs.unlinkSync(file);
         }
         catch (_err) {
@@ -697,7 +698,7 @@ function compressFile(filename) {
         const write = fs.createWriteStream(filename);
         read.pipe(zip).pipe(write);
         return new Promise((resolve, reject) => {
-            write.on('error', 
+            write.on('error',
             /* istanbul ignore next */ err => {
                 // close the write stream and propagate the error
                 write.end();
