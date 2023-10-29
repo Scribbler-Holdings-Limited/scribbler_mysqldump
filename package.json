@@ -45,6 +45,7 @@
     "dependencies": {
         "deepmerge": "^3.2.0",
         "mysql2": "^2.1.0",
+        "mysqldump": "^3.2.0",
         "sql-formatter": "^2.3.2",
         "sqlstring": "^2.3.1"
     },
